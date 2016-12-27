@@ -1,0 +1,32 @@
+// Usually FizzBuzz is for numbers 1-100 but this will allow the user to input any number and return the correct response.
+
+void FizzBuzz(int n)
+{
+  for (int i = 1; i <= n; i++)
+      {
+          bool mod3 = i % 3, mod5 = i % 5;
+          if (!mod3)
+              cout << "fizz";
+          if (!mod5)
+              cout << "buzz";
+          if (mod3 && mod5)
+              cout << i;
+          cout << endl;
+      }
+}
+
+// Allows the user to specify the range and the numbers they would like to be replaced with fizzbuzz
+void FizzBuzz(int n, int firstMod, int secondMod)
+{
+  for (int i = 1; i <= n; i++)
+      {
+          bool mod1 = i % firstMod, mod2 = i % secondMod;
+          if (!mod1)
+              cout << "fizz";
+          if (!mod2)
+              cout << "buzz";
+          if (mod1 && mod2)
+              cout << i;
+          cout << endl;
+      }
+}
